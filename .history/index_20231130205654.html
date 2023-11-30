@@ -1,0 +1,121 @@
+<!--
+    My Portfolio 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> FeyroozeCode | Ibrahim Ahmad </title>
+    <style>
+       
+            body {
+                @apply font-sans bg-gray-100;
+            }
+        
+            #app {
+                @apply flex h-screen bg-gray-200;
+            }
+        
+            /* Sidebar Styles */
+            .sidebar {
+                @apply bg-indigo-700 text-white w-64 py-8 px-4;
+            }
+        
+            .sidebar h1 {
+                @apply text-xl font-semibold mb-4;
+            }
+        
+            .sidebar nav ul li {
+                @apply mb-2 p-2 rounded cursor-pointer;
+            }
+        
+            .sidebar nav ul li:hover,
+            .sidebar nav ul li:focus {
+                @apply bg-indigo-800;
+            }
+        
+            /* Content Styles */
+            .content {
+                @apply flex-1 p-8;
+            }
+        
+            .content h2 {
+                @apply text-3xl font-semibold mb-4;
+            }
+    </style>
+
+     <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-gray-100">
+
+    <div id="app" class="flex h-screen bg-gray-200">
+        <!-- Sidebar -->
+        <aside class="bg-teal-500 w-64 p-6">
+            <h1 class="text-2xl font-semibold text-white">Portfolio</h1>
+            <nav class="mt-6">
+                <ul>
+                    <li>
+                        <router-link to="/" class="text-white hover:underline">About me</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/skills" class="text-white hover:underline">Skills</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/projects" class="text-white hover:underline">Projects</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/blog" class="text-white hover:underline">Blog Articles</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/contact" class="text-white hover:underline">Contact me</router-link>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200">
+            <router-view></router-view>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+
+        const HomeComp     =  { template: '<div>About me content</div>' }
+        const SkillsComp   =  { template: '<div>Skills content</div>'   }
+        const ProjectsComp =  { template: '<div>Projects content</div>' }
+        const BlogComp     =  { template: '<div>Blog Articles content</div>'}
+        const ContactComp  =  { template: '<div>Contact me content</div>'   } 
+
+        const routes = [
+            { path: '/',         component: HomeComp },
+            { path: '/skills',   component: SkillsComp },
+            { path: '/projects', component: ProjectsComp },
+            { path: '/blog',     component: BlogComp    },
+            { path: '/contact',  component: ContactComp}
+        ];
+
+        const router = VueRouter.createRouter({
+            history: VueRouter.createWebHasHistory(),
+            routes,
+        });
+
+        const app = Vue.createApp({});
+        app.use(router);
+
+        app.component('navbar', {
+            template: `
+            <nav>
+                <router-link to="/">Home</router-link>
+                <router-link to=""
+            </nav>
+            `
+        })
+
+        app.mount('#app');
+    </script>
+</body>
+</html>

@@ -48,8 +48,9 @@
 </head>
 <body>
 
-    <div id="app">
-    
+    <div class=>
+
+    </div>
     <!-- sidebar-->
     <aside class="bg-teal-500 w-64 p-6">
          <h1 class="text-2xl font-semibold text-white">Portfolio</h1>
@@ -69,51 +70,60 @@
     </nav>
     </aside>
 
-<main id="main">
+<main id="app">
     
 </main>
 
-</div>
 <script>
   function navigateTo(page) {
     switch (page) {
       case 'home':
-            renderPage(homePage)
+        renderHome();
         break;
       case 'about':
-            renderPage(aboutPage)
+        renderAbout();
         break;
       case 'projects':
-            renderPage(projectsPage)
+        renderProjects();
         break;
       case 'contact':
-        renderPage(contactPage)
+        renderContact();
         break;
       default:
         renderHome();
     }
   }
 
-  const homePage = ` <h2 class="text-3xl font-bold mb-4">Welcome to My Portfolio</h2>
+  const home = ` <h2 class="text-3xl font-bold mb-4">Welcome to My Portfolio</h2>
       <p>This is the home page of my portfolio. Feel free to explore!</p>
     `
-  const aboutPage = `
+  const about = `
       <h2 class="text-3xl font-bold mb-4">About Me</h2>
       <p>This is the about me section of my portfolio. Learn more about who I am and my skills.</p>
     `
-  const projectsPage = `
+  const projects = `
       <h2 class="text-3xl font-bold mb-4">My Projects</h2>
       <p>Explore the projects I have worked on in this section.</p>
     `
-  const contactPage =  `
+  const contact =  `
       <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
       <p>Feel free to contact me through the provided information.</p>
     `
 
-  const main = `main` ;
+  function renderHome() {
+    document.getElementById('app').innerHTML = home ;
+  }
 
-  function renderPage(page) {
-    document.getElementById(main).innerHTML = page ;
+  function renderAbout() {
+    document.getElementById('app').innerHTML = about ;
+  }
+
+  function renderProjects() {
+    document.getElementById('app').innerHTML = projects;
+  }
+
+  function renderContact() {
+    document.getElementById('app').innerHTML = contact ;
   }
 
   // Initial load

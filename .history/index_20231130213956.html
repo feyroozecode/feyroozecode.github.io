@@ -48,8 +48,6 @@
 </head>
 <body>
 
-    <div id="app">
-    
     <!-- sidebar-->
     <aside class="bg-teal-500 w-64 p-6">
          <h1 class="text-2xl font-semibold text-white">Portfolio</h1>
@@ -73,7 +71,6 @@
     
 </main>
 
-</div>
 <script>
   function navigateTo(page) {
     switch (page) {
@@ -84,10 +81,10 @@
             renderPage(aboutPage)
         break;
       case 'projects':
-            renderPage(projectsPage)
+            renderPage(contactPage)
         break;
       case 'contact':
-        renderPage(contactPage)
+        renderContact();
         break;
       default:
         renderHome();

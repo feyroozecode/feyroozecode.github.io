@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio SPA</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 2rem;
+    }
+  </style>
+     <script src="https://cdn.tailwindcss.com"></script>
+</head>
+</head>
+<body>
+
+    <!-- sidebar-->
+<header class="text-white">
+    <aside class="bg-teal-500 w-64 p-6">
+    <nav class="bg-gray-800">
+        <li>
+            <a href="#" onclick="navigateTo('home')">Home</a>
+        </li>
+       <li>
+         <a href="#" onclick="navigateTo('about')">About</a>
+       </li>
+       <li>
+         <a href="#" onclick="navigateTo('projects')">Projects</a>
+       </li>
+        <li>
+          <a href="#" onclick="navigateTo('contact')">Contact</a>
+        </li>
+    </nav>
+    </aside>
+</header>
+
+<main id="app">
+    
+</main>
+
+<script>
+  function navigateTo(page) {
+    switch (page) {
+      case 'home':
+        renderHome();
+        break;
+      case 'about':
+        renderAbout();
+        break;
+      case 'projects':
+        renderProjects();
+        break;
+      case 'contact':
+        renderContact();
+        break;
+      default:
+        renderHome();
+    }
+  }
+
+  const home = ` <h2 class="text-3xl font-bold mb-4">Welcome to My Portfolio</h2>
+      <p>This is the home page of my portfolio. Feel free to explore!</p>
+    `
+  const about = `
+      <h2 class="text-3xl font-bold mb-4">About Me</h2>
+      <p>This is the about me section of my portfolio. Learn more about who I am and my skills.</p>
+    `
+  const 
+
+  function renderHome() {
+    document.getElementById('app').innerHTML = home ;
+  }
+
+  function renderAbout() {
+    document.getElementById('app').innerHTML = about ;
+  }
+
+  function renderProjects() {
+    document.getElementById('app').innerHTML = ;
+  }
+
+  function renderContact() {
+    document.getElementById('app').innerHTML = `
+      <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+      <p>Feel free to contact me through the provided information.</p>
+    `;
+  }
+
+  // Initial load
+  navigateTo('home');
+</script>
+
+</body>
+</html>
