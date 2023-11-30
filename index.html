@@ -66,8 +66,43 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Your Portfolio</title>
     <style>
-        FeyroozeCode | Ibrahim Ahmad Portfolio
+       
+            body {
+                @apply font-sans bg-gray-100;
+            }
+        
+            #app {
+                @apply flex h-screen bg-gray-200;
+            }
+        
+            /* Sidebar Styles */
+            .sidebar {
+                @apply bg-indigo-700 text-white w-64 py-8 px-4;
+            }
+        
+            .sidebar h1 {
+                @apply text-xl font-semibold mb-4;
+            }
+        
+            .sidebar nav ul li {
+                @apply mb-2 p-2 rounded cursor-pointer;
+            }
+        
+            .sidebar nav ul li:hover,
+            .sidebar nav ul li:focus {
+                @apply bg-indigo-800;
+            }
+        
+            /* Content Styles */
+            .content {
+                @apply flex-1 p-8;
+            }
+        
+            .content h2 {
+                @apply text-3xl font-semibold mb-4;
+            }
     </style>
+
 </head>
 <body class="font-sans bg-gray-100">
 
