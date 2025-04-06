@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahim Ahmad - Développeur Mobile Flutter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .skill-badge {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-badge:hover {
+            transform: scale(1.05);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .wave {
+            animation: wave 8s linear infinite;
+        }
+        
+        @keyframes wave {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-blue-600">Ibrahim Ahmad</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#accueil" class="text-gray-700 hover:text-blue-600 transition">Accueil</a>
+                    <a href="#apropos" class="text-gray-700 hover:text-blue-600 transition">À propos</a>
+                    <a href="#competences" class="text-gray-700 hover:text-blue-600 transition">Compétences</a>
+                    <a href="#projets" class="text-gray-700 hover:text-blue-600 transition">Projets</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#accueil" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition">Accueil</a>
+                <a href="#apropos" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition">À propos</a>
+                <a href="#competences" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition">Compétences</a>
+                <a href="#projets" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition">Projets</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="pt-24 pb-16 md:pt-32 md:pb-24 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Bonjour, je suis <span class="text-yellow-300">Ibrahim Ahmad</span></h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6">Développeur Mobile Flutter Expert</h2>
+                    <p class="text-lg mb-8">Je crée des applications mobiles performantes et élégantes avec 7 ans d'expérience dans le domaine Fintech et les bonnes pratiques de développement.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Contactez-moi</a>
+                        <a href="#projets" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition">Voir mes projets</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center relative">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Ibrahim Ahmad" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white shadow-xl floating">
+                        <div class="absolute -bottom-5 -right-5 bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg font-bold shadow-lg">
+                            <span>7+ ans</span>
+                        </div>
+                    </div>
+                    <div class="absolute -z-10 top-10 right-10 opacity-20 wave">
+                        <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#FFFFFF" d="M44.1,-59.1C56.2,-51.5,64.6,-37.2,68.3,-21.9C72,-6.6,71,9.7,63.8,23.3C56.6,36.9,43.2,47.8,27.7,56.5C12.2,65.2,-5.5,71.7,-22.2,67.7C-38.9,63.7,-54.6,49.2,-62.1,32.3C-69.6,15.4,-68.9,-3.9,-62.2,-21.1C-55.5,-38.3,-42.8,-53.4,-27.9,-60.3C-13,-67.2,4.1,-65.9,20.3,-60.1C36.5,-54.3,51.8,-44,44.1,-59.1Z" transform="translate(100 100)" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">À propos de moi</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Ibrahim Ahmad" class="w-64 h-64 rounded-full object-cover border-4 border-blue-100 shadow-lg">
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Développeur Mobile Flutter avec expertise Fintech</h3>
+                    <p class="text-gray-600 mb-6">
+                        Passionné par le développement mobile depuis plus de 7 ans, je me spécialise dans la création d'applications performantes et intuitives avec Flutter. Mon expertise dans le domaine Fintech me permet de développer des solutions sécurisées et conformes aux réglementations.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        J'ai travaillé sur divers projets indépendants et en équipe, en mettant l'accent sur les bonnes pratiques de développement, les architectures propres et les performances optimales. Mon approche est centrée sur l'utilisateur et la qualité du code.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-mobile-alt text-blue-600"></i>
+                            </div>
+                            <span class="font-medium">Applications Cross-Platform</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-shield-alt text-blue-600"></i>
+                            </div>
+                            <span class="font-medium">Sécurité Fintech</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-rocket text-blue-600"></i>
+                            </div>
+                            <span class="font-medium">Performances Optimales</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="competences" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Mes Compétences</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Flutter -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-mobile-alt text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Flutter</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Expertise approfondie en développement d'applications cross-platform avec Flutter, création d'interfaces utilisateur réactives et mise en œuvre d'architectures robustes.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Dart</span>
+                        <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">BLoC</span>
+                        <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Provider</span>
+                        <span class="skill-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">GetX</span>
+                    </div>
+                </div>
+                
+                <!-- Native Development -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i class="fab fa-android text-green-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Développement Natif</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Compétences en développement natif pour Android (Jetpack Compose) et iOS (Swift), permettant des solutions hybrides ou des modules spécifiques.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Jetpack Compose</span>
+                        <span class="skill-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Swift</span>
+                        <span class="skill-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Kotlin</span>
+                        <span class="skill-badge bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">SwiftUI</span>
+                    </div>
+                </div>
+                
+                <!-- Backend & Database -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-database text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Backend & Base de données</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Expérience avec Firebase et Supabase pour le backend, l'authentification, le stockage et les bases de données temps réel, ainsi que l'intégration d'API REST.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Firebase</span>
+                        <span class="skill-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Supabase</span>
+                        <span class="skill-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">REST API</span>
+                        <span class="skill-badge bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">GraphQL</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Skills -->
+            <div class="mt-12">
+                <h3 class="text-xl font-semibold text-center mb-6">Autres Compétences</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="skill-badge bg-gray-100 text-gray-800 px-4 py-2 rounded-lg flex items-center">
+                        <i class="fab fa-git-alt text-gray-700 mr-2"></i>
+                        <span>Git & CI/CD</span>
+                    </div>
+                    <div class="skill-badge bg-gray-100 text-gray-800 px-4 py-2 rounded-lg flex items-center">
+                        <i class="fas fa-chart-line text-gray-700 mr-2"></i>
+                        <span>Analytics</span>
+                    </div>
+                    <div class="skill-badge bg-gray-100 text-gray-800 px-4 py-2 rounded-lg flex items-center">
+                        <i class="fas fa-lock text-gray-700 mr-2"></i>
+                        <span>Sécurité Fintech</span>
+                    </div>
+                    <div class="skill-badge bg-gray-100 text-gray-800 px-4 py-2 rounded-lg flex items-center">
+                        <i class="fas fa-bug text-gray-700 mr-2"></i>
+                        <span>Tests Unitaires</span>
+                    </div>
+                    <div class="skill-badge bg-gray-100 text-gray-800 px-4 py-2 rounded-lg flex items-center">
+                        <i class="fas fa-paint-brush text-gray-700 mr-2"></i>
+                        <span>UI/UX Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projets" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Mes Projets</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Découvrez une sélection de mes réalisations récentes dans le domaine mobile et Fintech.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-wallet text-6xl text-blue-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">FinWallet</h3>
+                        <p class="text-gray-600 mb-4">Application bancaire sécurisée avec gestion de portefeuille, paiements et analyse des dépenses.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Flutter</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Firebase</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">BLoC</span>
+                        </div>
+                        <a href="#" class="text-blue-600 font-medium flex items-center">
+                            Voir plus <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <i class="fas fa-chart-pie text-6xl text-green-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">InvestTrack</h3>
+                        <p class="text-gray-600 mb-4">Plateforme de suivi d'investissements avec analyse de marché et notifications en temps réel.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Flutter</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Supabase</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Swift</span>
+                        </div>
+                        <a href="#" class="text-green-600 font-medium flex items-center">
+                            Voir plus <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-exchange-alt text-6xl text-purple-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">PayLink</h3>
+                        <p class="text-gray-600 mb-4">Solution de paiement peer-to-peer avec cryptomonnaies et transferts internationaux.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs">Flutter</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs">Firebase</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs">Kotlin</span>
+                        </div>
+                        <a href="#" class="text-purple-600 font-medium flex items-center">
+                            Voir plus <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg font-medium hover:bg-blue-600 hover:text-white transition">
+                    <i class="fab fa-github mr-2"></i> Voir plus de projets sur GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Mon Parcours</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-blue-200 transform -translate-x-1/2"></div>
+                
+                <!-- Timeline items -->
+                <div class="space-y-8 md:space-y-16">
+                    <!-- Item 1 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
+                            <h3 class="text-xl font-semibold">Développeur Mobile Senior</h3>
+                            <p class="text-blue-600 font-medium">FinTech Solutions</p>
+                            <p class="text-gray-500">2021 - Présent</p>
+                        </div>
+                        <div class="hidden md:flex justify-center items-center w-12 h-12 rounded-full bg-blue-600 text-white absolute left-1/2 transform -translate-x-1/2">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12">
+                            <p class="text-gray-600">
+                                Développement d'applications bancaires sécurisées avec Flutter, intégration de systèmes de paiement et mise en place d'architectures robustes pour le secteur Fintech.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right order-1 md:order-none">
+                            <p class="text-gray-600">
+                                Création d'applications cross-platform pour divers clients, optimisation des performances et mise en œuvre de solutions natives lorsque nécessaire.
+                            </p>
+                        </div>
+                        <div class="hidden md:flex justify-center items-center w-12 h-12 rounded-full bg-blue-600 text-white absolute left-1/2 transform -translate-x-1/2">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 order-0 md:order-1">
+                            <h3 class="text-xl font-semibold">Développeur Mobile Indépendant</h3>
+                            <p class="text-blue-600 font-medium">Freelance</p>
+                            <p class="text-gray-500">2018 - 2021</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
+                            <h3 class="text-xl font-semibold">Développeur Android Junior</h3>
+                            <p class="text-blue-600 font-medium">TechInnov</p>
+                            <p class="text-gray-500">2016 - 2018</p>
+                        </div>
+                        <div class="hidden md:flex justify-center items-center w-12 h-12 rounded-full bg-blue-600 text-white absolute left-1/2 transform -translate-x-1/2">
+                            <i class="fab fa-android"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12">
+                            <p class="text-gray-600">
+                                Début de carrière dans le développement natif Android, apprentissage des bonnes pratiques et premières expériences avec les applications financières.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Contactez-moi</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Vous avez un projet en tête ou souhaitez discuter d'une opportunité ? N'hésitez pas à me contacter.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nom complet</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Sujet</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition flex items-center justify-center">
+                            <i class="fas fa-paper-plane mr-2"></i> Envoyer le message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-xl h-full">
+                        <h3 class="text-xl font-semibold mb-6">Informations de contact</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Email</h4>
+                                    <a href="mailto:contact@ibrahimahmad.com" class="text-blue-600 hover:underline">contact@ibrahimahmad.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Téléphone</h4>
+                                    <a href="tel:+33612345678" class="text-blue-600 hover:underline">+33 6 12 34 56 78</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Localisation</h4>
+                                    <p class="text-gray-600">Paris, France</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <h4 class="font-medium text-gray-800 mb-4">Suivez-moi</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-gray-200 p-3 rounded-full text-gray-700 hover:bg-blue-600 hover:text-white transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="bg-gray-200 p-3 rounded-full text-gray-700 hover:bg-gray-900 hover:text-white transition">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="bg-gray-200 p-3 rounded-full text-gray-700 hover:bg-blue-400 hover:text-white transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-gray-200 p-3 rounded-full text-gray-700 hover:bg-red-600 hover:text-white transition">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-xl font-bold">Ibrahim Ahmad</span>
+                    <p class="text-gray-400 mt-1">Développeur Mobile Flutter Expert</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#accueil" class="text-gray-400 hover:text-white transition">Accueil</a>
+                    <a href="#apropos" class="text-gray-400 hover:text-white transition">À propos</a>
+                    <a href="#competences" class="text-gray-400 hover:text-white transition">Compétences</a>
+                    <a href="#projets" class="text-gray-400 hover:text-white transition">Projets</a>
+                    <a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+                <p>&copy; 2023 Ibrahim Ahmad. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    mobileMenu.classList.add('hidden');
+                    
+                    // Scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add shadow to navbar on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
