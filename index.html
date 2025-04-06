@@ -6,50 +6,7 @@
     <title>Ibrahim Ahmad - Développeur Mobile Flutter</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        
-        .skill-badge {
-            transition: all 0.3s ease;
-        }
-        
-        .skill-badge:hover {
-            transform: scale(1.05);
-        }
-        
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-        
-        @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-        
-        .wave {
-            animation: wave 8s linear infinite;
-        }
-        
-        @keyframes wave {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-50 text-gray-800">
     <!-- Navigation -->
@@ -348,56 +305,73 @@
                 
                 <!-- Timeline items -->
                 <div class="space-y-8 md:space-y-16">
+                   
                     <!-- Item 1 -->
                     <div class="relative flex flex-col md:flex-row items-center">
                         <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
-                            <h3 class="text-xl font-semibold">Développeur Mobile Senior</h3>
-                            <p class="text-blue-600 font-medium">FinTech Solutions</p>
-                            <p class="text-gray-500">2021 - Présent</p>
-                        </div>
-                        <div class="hidden md:flex justify-center items-center w-12 h-12 rounded-full bg-blue-600 text-white absolute left-1/2 transform -translate-x-1/2">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <div class="md:w-1/2 md:pl-12">
-                            <p class="text-gray-600">
-                                Développement d'applications bancaires sécurisées avec Flutter, intégration de systèmes de paiement et mise en place d'architectures robustes pour le secteur Fintech.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Item 2 -->
-                    <div class="relative flex flex-col md:flex-row items-center">
-                        <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right order-1 md:order-none">
-                            <p class="text-gray-600">
-                                Création d'applications cross-platform pour divers clients, optimisation des performances et mise en œuvre de solutions natives lorsque nécessaire.
-                            </p>
+                            <h3 class="text-xl font-semibold">Développeur Independent</h3>
+                            <p class="text-blue-600 font-medium">Freelance</p>
+                            <p class="text-gray-500">déc. 2024 - aujourd'hui</p>
                         </div>
                         <div class="hidden md:flex justify-center items-center w-12 h-12 rounded-full bg-blue-600 text-white absolute left-1/2 transform -translate-x-1/2">
                             <i class="fas fa-laptop-code"></i>
                         </div>
-                        <div class="md:w-1/2 md:pl-12 order-0 md:order-1">
-                            <h3 class="text-xl font-semibold">Développeur Mobile Indépendant</h3>
-                            <p class="text-blue-600 font-medium">Freelance</p>
-                            <p class="text-gray-500">2018 - 2021</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Item 3 -->
-                    <div class="relative flex flex-col md:flex-row items-center">
-                        <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
-                            <h3 class="text-xl font-semibold">Développeur Android Junior</h3>
-                            <p class="text-blue-600 font-medium">TechInnov</p>
-                            <p class="text-gray-500">2016 - 2018</p>
-                        </div>
-                        <div class="hidden md:flex justify-center items-center w-12 h-12 rounded-full bg-blue-600 text-white absolute left-1/2 transform -translate-x-1/2">
-                            <i class="fab fa-android"></i>
-                        </div>
                         <div class="md:w-1/2 md:pl-12">
                             <p class="text-gray-600">
-                                Début de carrière dans le développement natif Android, apprentissage des bonnes pratiques et premières expériences avec les applications financières.
+                                Développement d'applications web et mobiles en tant que freelance, spécialisé dans les solutions innovantes et personnalisées.
                             </p>
                         </div>
                     </div>
+    
+                    <!-- Item 2 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
+                            <h3 class="text-xl font-semibold">Développeur Applications Mobile</h3>
+                            <p class="text-blue-600 font-medium">NITA Transfert d'Argent</p>
+                            <p class="text-gray-500">mai 2024 - nov. 2024</p>
+                        </div>
+                        <div class="hidden md:flex justify-center items-center w-12 h-12 rounded-full bg-blue-600 text-white absolute left-1/2 transform -translate-x-1/2">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12">
+                            <p class="text-gray-600">
+                                Conception et développement de solutions mobiles sécurisées pour le transfert d'argent, avec focus sur l'expérience utilisateur et les méthodologies agiles.
+                            </p>
+                        </div>
+                    </div>
+            
+                    <!-- Item 3 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
+                            <h3 class="text-xl font-semibold">Formateur Indépendent</h3>
+                            <p class="text-blue-600 font-medium">AlfajerApps</p>
+                            <p class="text-gray-500">févr. 2020 - aujourd'hui</p>
+                        </div>
+                        <div class="hidden md:flex justify-center items-center w-12 h-12 rounded-full bg-blue-600 text-white absolute left-1/2 transform -translate-x-1/2">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12">
+                            <p class="text-gray-600">
+                                Formation en développement d'applications mobiles, Python et IA. Expertise en Android, Linux et formation en ligne.
+                            </p>
+                        </div>
+
+            <!-- ITEM 4 -->
+                          <!-- Item 3 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
+                            <h3 class="text-xl font-semibold">Trainee C# .Net Developer & AI reSearcher</h3>
+                            <p class="text-blue-600 font-medium">Gabera Software Solutions </p>
+                            <p class="text-gray-500">Janv. 2023 - Mai 2024</p>
+                        </div>
+                        <div class="hidden md:flex justify-center items-center w-12 h-12 rounded-full bg-blue-600 text-white absolute left-1/2 transform -translate-x-1/2">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12">
+                            <p class="text-gray-600">
+                                Développeur FullStack en C# .Net & IA. Expertise en .Net C# , .Net Framwork, .net Core, IA and reSearcher in NLP.
+                            </p>
+                        </div>
                 </div>
             </div>
         </div>
