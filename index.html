@@ -87,9 +87,9 @@
                     <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Ibrahim Ahmad" class="w-64 h-64 rounded-full object-cover border-4 border-blue-100 shadow-lg">
                 </div>
                 <div class="md:w-2/3 md:pl-12">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Développeur Mobile Flutter avec expertise Fintech</h3>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Développeur Mobile Flutter avec une expertise de 7 ans </h3>
                     <p class="text-gray-600 mb-6">
-                        Passionné par le développement mobile depuis plus de 7 ans, je me spécialise dans la création d'applications performantes et intuitives avec Flutter. Mon expertise dans le domaine Fintech me permet de développer des solutions sécurisées et conformes aux réglementations.
+                        Passionné par le développement mobile depuis plus de 7 ans, je me spécialise dans la création d'applications performantes et intuitives avec Flutter. Mon expertise dans le domaine à valeur couvrent le devéloppement d'Application dans l'Ecomerce, la Fintech me permet de développer des solutions performantes et sécurisées et conformes aux réglementations.
                     </p>
                     <p class="text-gray-600 mb-6">
                         J'ai travaillé sur divers projets indépendants et en équipe, en mettant l'accent sur les bonnes pratiques de développement, les architectures propres et les performances optimales. Mon approche est centrée sur l'utilisateur et la qualité du code.
@@ -311,7 +311,7 @@
                         <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
                             <h3 class="text-xl font-semibold">Développeur Independent</h3>
                             <p class="text-blue-600 font-medium">Freelance</p>
-                            <p class="text-gray-500">déc. 2024 - aujourd'hui</p>
+                            <p class="text-gray-500">déc. 2024 - aujourd'hui (5 mois) </p>
                         </div>
                         <div class="hidden md:flex justify-center items-center w-12 h-12 rounded-full bg-blue-600 text-white absolute left-1/2 transform -translate-x-1/2">
                             <i class="fas fa-laptop-code"></i>
@@ -343,6 +343,23 @@
                     <!-- Item 3 -->
                     <div class="relative flex flex-col md:flex-row items-center">
                         <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
+                            <h3 class="text-xl font-semibold">Trainee C# .Net Developer & AI reSearcher</h3>
+                            <p class="text-blue-600 font-medium">Gabera Software Solutions </p>
+                            <p class="text-gray-500">Janv. 2023 - Mai 2024</p>
+                        </div>
+                        <div class="hidden md:flex justify-center items-center w-12 h-12 rounded-full bg-blue-600 text-white absolute left-1/2 transform -translate-x-1/2">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12">
+                            <p class="text-gray-600">
+                                Développeur FullStack en C# .Net & IA. Expertise en .Net C# , .Net Framwork, .net Core, IA and reSearcher in NLP.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 4-->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
                             <h3 class="text-xl font-semibold">Formateur Indépendent</h3>
                             <p class="text-blue-600 font-medium">AlfajerApps</p>
                             <p class="text-gray-500">févr. 2020 - aujourd'hui</p>
@@ -357,22 +374,7 @@
                         </div>
 
             <!-- ITEM 4 -->
-                          <!-- Item 3 -->
-                    <div class="relative flex flex-col md:flex-row items-center">
-                        <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
-                            <h3 class="text-xl font-semibold">Trainee C# .Net Developer & AI reSearcher</h3>
-                            <p class="text-blue-600 font-medium">Gabera Software Solutions </p>
-                            <p class="text-gray-500">Janv. 2023 - Mai 2024</p>
-                        </div>
-                        <div class="hidden md:flex justify-center items-center w-12 h-12 rounded-full bg-blue-600 text-white absolute left-1/2 transform -translate-x-1/2">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                        </div>
-                        <div class="md:w-1/2 md:pl-12">
-                            <p class="text-gray-600">
-                                Développeur FullStack en C# .Net & IA. Expertise en .Net C# , .Net Framwork, .net Core, IA and reSearcher in NLP.
-                            </p>
-                        </div>
-                </div>
+                      
             </div>
         </div>
     </section>
@@ -492,44 +494,6 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        document.getElementById('menu-btn').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    // Close mobile menu if open
-                    const mobileMenu = document.getElementById('mobile-menu');
-                    mobileMenu.classList.add('hidden');
-                    
-                    // Scroll to target
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Add shadow to navbar on scroll
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('shadow-lg');
-            } else {
-                nav.classList.remove('shadow-lg');
-            }
-        });
-    </script>
+<script src="script.js"></script>
 </body>
 </html>
